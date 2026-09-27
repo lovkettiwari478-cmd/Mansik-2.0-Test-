@@ -1,0 +1,16 @@
+node_modules
+dist
+data
+*.db
+*.log
+.git
+.gitignore
+.env
+npm-debug.log
+coverage
+.nyc_output
+.vscode
+.idea
+*.md
+!README.md
+Unselected files

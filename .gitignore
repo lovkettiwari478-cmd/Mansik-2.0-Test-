@@ -1,0 +1,15 @@
+node_modules
+dist
+data/*.db
+data/*.db-*
+data/uploads/*
+.env
+!/.env.example
+coverage
+.nyc_output
+.DS_Store
+*.log
+Unselected files
+debug_test.*
+smoke_test.*
+live_smoke.*

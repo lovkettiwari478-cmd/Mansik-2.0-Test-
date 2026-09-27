@@ -1,0 +1,32 @@
+run = "npm run build && npm start"
+entrypoint = "dist/server/index.js"
+
+[deployment]
+run = ["npm", "run", "build"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[env]
+NODE_ENV = "production"
+DATABASE_PATH = "./data/manisk.db"
+UPLOAD_PATH = "./data/uploads"
+
+[nix]
+channel = "stable-23_11"
+
+[unitTest]
+language = "nodejs"
+
+[debugger]
+support = true
+
+[languages]
+
+[languages.javascript]
+pattern = "**/{*.js,*.jsx,*.ts,*.tsx}"
+
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
